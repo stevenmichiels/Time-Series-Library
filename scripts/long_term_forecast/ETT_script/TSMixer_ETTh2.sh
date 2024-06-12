@@ -1,99 +1,86 @@
-export CUDA_VISIBLE_DEVICES=4
 
-model_name=MICN
+model_name=TSMixer
 
 python -u run.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/illness/ \
-  --data_path national_illness.csv \
-  --model_id ili_36_24 \
+  --root_path ./dataset/ETT-small/ \
+  --data_path ETTh2.csv \
+  --model_id ETTh2_96_96 \
   --model $model_name \
-  --data custom \
+  --data ETTh2 \
   --features M \
-  --seq_len 36 \
-  --label_len 36 \
-  --pred_len 24 \
+  --seq_len 96 \
+  --label_len 48 \
+  --pred_len 96 \
   --e_layers 2 \
   --d_layers 1 \
   --factor 3 \
   --enc_in 7 \
   --dec_in 7 \
   --c_out 7 \
-  --d_model 768 \
-  --d_ff 768 \
-  --top_k 5 \
   --des 'Exp' \
   --itr 1
 
 python -u run.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/illness/ \
-  --data_path national_illness.csv \
-  --model_id ili_36_36 \
+  --root_path ./dataset/ETT-small/ \
+  --data_path ETTh2.csv \
+  --model_id ETTh2_96_192 \
   --model $model_name \
-  --data custom \
+  --data ETTh2 \
   --features M \
-  --seq_len 36 \
-  --label_len 36 \
-  --pred_len 36 \
+  --seq_len 96 \
+  --label_len 48 \
+  --pred_len 192 \
   --e_layers 2 \
   --d_layers 1 \
   --factor 3 \
   --enc_in 7 \
   --dec_in 7 \
   --c_out 7 \
-  --d_model 768 \
-  --d_ff 768 \
-  --top_k 5 \
   --des 'Exp' \
   --itr 1
 
 python -u run.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/illness/ \
-  --data_path national_illness.csv \
-  --model_id ili_36_48 \
+  --root_path ./dataset/ETT-small/ \
+  --data_path ETTh2.csv \
+  --model_id ETTh2_96_336 \
   --model $model_name \
-  --data custom \
+  --data ETTh2 \
   --features M \
-  --seq_len 36 \
-  --label_len 36 \
-  --pred_len 48 \
+  --seq_len 96 \
+  --label_len 48 \
+  --pred_len 336 \
   --e_layers 2 \
   --d_layers 1 \
   --factor 3 \
   --enc_in 7 \
   --dec_in 7 \
   --c_out 7 \
-  --d_model 768 \
-  --d_ff 768 \
-  --top_k 5 \
   --des 'Exp' \
   --itr 1
 
 python -u run.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/illness/ \
-  --data_path national_illness.csv \
-  --model_id ili_36_60 \
+  --root_path ./dataset/ETT-small/ \
+  --data_path ETTh2.csv \
+  --model_id ETTh2_96_720 \
   --model $model_name \
-  --data custom \
+  --data ETTh2 \
   --features M \
-  --seq_len 36 \
-  --label_len 36 \
-  --pred_len 60 \
+  --seq_len 96 \
+  --label_len 48 \
+  --pred_len 720 \
   --e_layers 2 \
   --d_layers 1 \
   --factor 3 \
   --enc_in 7 \
   --dec_in 7 \
   --c_out 7 \
-  --d_model 768 \
-  --d_ff 768 \
-  --top_k 5 \
   --des 'Exp' \
   --itr 1
